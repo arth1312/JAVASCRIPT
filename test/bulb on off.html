@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Toggle</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        img {
+            width: 150px;
+            transition: 0.3s;
+        }
+        .switch {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .switch input {
+            display: none;
+        }
+        .switch label {
+            width: 60px;
+            height: 30px;
+            background-color: #ccc;
+            border-radius: 15px;
+            position: relative;
+            cursor: pointer;
+        }
+        .switch label::before {
+            content: '';
+            width: 26px;
+            height: 26px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            transition: 0.3s;
+        }
+        .switch input:checked + label {
+            background-color: #008CBA;
+        }
+        .switch input:checked + label::before {
+            transform: translateX(30px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Bulb On/Off Toggle</h2>
+        <img id="bulb" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Bulb">
+        <br>
+        <div class="switch">
+            <input type="checkbox" id="toggle" onclick="toggleBulb()">
+            <label for="toggle"></label>
+        </div>
+    </div>
+
+    <script>
+        function toggleBulb() {
+            let bulb = document.getElementById('bulb');
+            let toggle = document.getElementById('toggle');
+            if (toggle.checked) {
+                bulb.src = 'https://www.w3schools.com/js/pic_bulbon.gif';
+            } else {
+                bulb.src = 'https://www.w3schools.com/js/pic_bulboff.gif';
+            }
+        }
+    </script>
+</body>
+</html>
