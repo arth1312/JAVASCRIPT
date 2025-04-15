@@ -177,17 +177,3 @@ console.log(input.replace(/dog/g, "cat"))
 // Output:- I often take a walk with my cat in the evening. His cat follows him everywhere. I don't feed my cat in the morning
 
 
-// Question no. 14
-console.log("Question no:- 14")
-let str = "Hire the top 1% freelance developers"
-let newstr = str.split(' ')
-let filterstr = newstr.filter(newstr => newstr.length <= 4)
-console.log(filterstr)
-// Output:- ['Hire', 'the', 'top', '1%']
-
-
-// Question no. 15
-console.log("Question no:- 15")
-let array1 = ['5', 32, 'Daniel']
-console.log(array1)
-// Output:- ['5', 32, 'Daniel']
