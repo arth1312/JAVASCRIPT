@@ -27,5 +27,7 @@ console.log(data);
 // data.setUTCSeconds(33)
 // console.log(data);
 
-data.getDate()
-console.log(data);
+// data.getDate()
+// console.log(data);
+
+console.log(Math.PI);
