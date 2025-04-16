@@ -23,7 +23,7 @@ console.log(data);
 // Access two method:-
 
 // 1. Dot(.) method:-
-console.log(data.name);
+console.log(data.name); 
 console.log(data.age);
 console.log(data.email);
 console.log(data.indian);
