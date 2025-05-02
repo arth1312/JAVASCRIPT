@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            color: brown;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        input{
+            width: 200px;
+            height: 20px;
+            background-color: lightskyblue;
+            border: 1px solid lightcyan;
+        }
+        input::placeholder{
+            font-size: 13px;
+            color: navy;
+        }
+        input:last-child{
+            color: white;
+            background-color: black;
+            width: 105px;
+            height: 50px;
+            transition-duration: .5s;
+        }
+        input:last-child:hover{
+            color: black;
+            background-color: white;
+            border: 1px solid black;
+        }
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div align="center">
+        <h1>Form Validation</h1>
+        <form>
+            <label>First Name:</label>
+            <input type="text" id="fname" placeholder="Enter your first name"/>
+            <span class="error" id="fnameErr"></span>
+            <br><br>
+            <label>Last Name:</label>
+            <input type="text" id="lname" placeholder="Enter your last name"/>
+            <span class="error" id="lnameErr"></span>
+            <br><br>
+            <label>Email:</label>
+            <input type="text" id="email" placeholder="Enter your email name"/>
+            <span class="error" id="emailErr"></span>
+            <br><br>
+            <label>Password:</label>
+            <input type="text" id="password" placeholder="Enter your Password"/>
+            <span class="error" id="passErr"></span>
+            <br><br>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+
+    <script src="validation.js"></script>
+</body>
+</html>
