@@ -35,4 +35,4 @@
 // console.log(data);
 
 // let person1 = JSON.parse(data);
-// console.log(person1); 
+// console.log(person1);  
