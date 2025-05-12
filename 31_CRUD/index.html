@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="add-book-form" align="center">
+        <h2>Book Store</h2>
+        <form id="add-book">
+            <table border="1">
+                <tr>
+                    <td>Title: </td>
+                    <td><input type="text" id="title"/></td>
+                </tr>
+                <tr>
+                    <td>Desc: </td>
+                    <td><input type="text" id="desc"/></td>
+                </tr>
+                <tr>
+                    <td>Price: </td>
+                    <td><input type="number" id="price"/></td>
+                </tr>
+                <tr>
+                    <td>Category: </td>
+                    <td><input type="text" id="category"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Add Book"/></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <hr>
+
+    <div align="center" >
+        <h2>Book Details</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Desc</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th colspan="2">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="view-book">
+                <!-- View All Books Data -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="crud.js"></script>
+</body>
+</html>
