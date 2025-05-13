@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+#product_btn{
+    background-color: black;
+    color: white;
+    transition-duration: 0.5s;
+}
+#product_btn:hover{
+    background-color: transparent;
+    border: 1px solid black!important;
+    color: black;
+}
+#cart_btn{
+    border: 1px solid black;
+    transition-duration: 0.5s;
+}
+#cart_btn:hover{
+    background-color: black;
+    color: white!important;
+}
+.navbar-toggler{
+    background-color: black!important;
+}
