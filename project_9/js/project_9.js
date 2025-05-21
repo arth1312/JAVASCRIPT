@@ -1,65 +1,74 @@
-let ProductForm = document.querySelector(".ProductForm");
-let ProductName = document.querySelector("#Product_name");
-let ProductImage = document.querySelector("#Product_image");
-let ProductPrice = document.querySelector("#Product_price");
-let ProductDescription = document.querySelector("#Product_description");
+// Add to Cart
 
-ProductForm.addEventListener("submit", (e) => {
-    e.preventDefault();
 
-    let products = JSON.parse(localStorage.getItem('products')) || [];
+document.querySelector("#ProductForm").addEventListener("submit", (event) => {
+    event.preventDefault();
+
+
+    let productName = document.querySelector("#Product_name").value;
+    let productImage = document.querySelector("#Product_image").value;
+    let price = document.querySelector("#Price").value;
+    let description = document.querySelector("#Description").value;
+  
 
     let formData = {
-        Product_name: ProductName.value,
-        Product_image: ProductImage.value,
-        Product_price: ProductPrice.value,
-        Product_description: ProductDescription.value
+        Product_name: productName,
+        Product_image: productImage,
+        Price: price,
+        Description: description
     };
 
+    let products = JSON.parse(localStorage.getItem("Product")) || [];
     products.push(formData);
-    localStorage.setItem('products', JSON.stringify(products));
 
-    displayProduct();
+    localStorage.setItem("Product", JSON.stringify(products));
+    document.querySelector("form").reset();
 
-    ProductForm.reset();
+    loadData();
+   
 });
 
-function displayProduct() {
-    let products = JSON.parse(localStorage.getItem('products')) || [];
 
-    let rowData = "";
-    products.forEach((record, index) => {
+function loadData() {
+    let allData = JSON.parse(localStorage.getItem("Product")) || [];
+
+    let result = "";
+    allData.forEach((record, index) => {
         let row = `
             <div class="product-cards" data-index="${index}">
                 <div class="product-card__image">
-                    <img src="${record.Product_image}" alt="${record.Product_name}">
+                    <img src="${record.Product_image}" alt="${record.Product_name}" width="100">
                 </div>
                 <div class="product-card__info">
-                    <h5 class="product-card__title">${record.Product_name}</h5>
-                    <p class="product-card__description">${record.Product_description}</p>
+                    <h2 class="product-card__title">${record.Product_name}</h2>
+                    <p class="product-card__description">${record.Description}</p>
                     <div class="product-card__price-row">
-                        <span class="product-card__price">${record.Product_price}</span>
-                        <button class="Product-card__btn">Add to Cart</button>
+                        <span class="product-card__price">${record.Price}</span>
+                        <button class="product-card__btn">Add to Cart</button>
                     </div>
                 </div>
             </div>
         `;
-        rowData = rowData + row;
+        result = result + row;
     });
 
-    document.querySelector(".cont").innerHTML = rowData;
-    document.querySelectorAll(".Product-card__btn").forEach((btn, index) => {
-        btn.addEventListener("click", () => addToCart(index))
+    document.querySelector(".cont").innerHTML = result;
+
+    document.querySelectorAll(".product-card__btn").forEach((btn, index) => {
+        btn.addEventListener("click", () => addToCart(index));
     });
 }
 
 function addToCart(index) {
-    let products = JSON.parse(localStorage.getItem('Product')) || [];
-    let cartProducts = JSON.parse(localStorage.getItem('CartProducts')) || [];
+    let products = JSON.parse(localStorage.getItem("Product")) || [];
+    let cartProducts = JSON.parse(localStorage.getItem("CartProducts")) || [];
+
     let productToAdd = products[index];
     cartProducts.push(productToAdd);
-    localStorage.setItem('CartProducts', JSON.stringify(cartProducts));
+
+    localStorage.setItem("CartProducts", JSON.stringify(cartProducts));
+
     alert(`${productToAdd.Product_name} added to cart`);
 }
 
-displayProduct();
+loadData();
