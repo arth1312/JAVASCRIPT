@@ -15,5 +15,5 @@ document.querySelector("button").addEventListener("click", () => {
             div.append(li);
         });
     };
-    xhr.send(); 
+    xhr.send();  
 });
