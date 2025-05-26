@@ -25,7 +25,7 @@ document.querySelector("button").addEventListener("click", () => {
 
             dogList.forEach(dog => {
                 let img = document.createElement('img');
-                img.setAttribute('src', dog);
+                img.setAttribute('src', dog); 
                 img.setAttribute('width', "200px");
                 img.setAttribute('height', "200px");
                 img.style.padding = "5px";
