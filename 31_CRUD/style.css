@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+h2{
+    padding: 10px 0;
+    color: navy;
+}
+table{
+    margin: 10px 0;
+}
+#add-book td:first-child, #edit-book td:first-child{
+    padding: 10px 5px;
+    color: navy;
+    background-color: rgb(219, 221, 255);
+}
+table td:last-child input{
+    padding: 12px 5px;
+    width: 200px;
+    background-color: rgb(236, 237, 253);
+    color: navy;
+    border: none;
+}
+table tr:last-child{
+    padding: 10px 5px;
+}
+th{
+    padding: 10px 10px;
+    color: navy;
+    background-color: rgb(219, 221, 255);
+}
+#view-book td{
+    padding: 10px 5px;
+    background-color: rgb(236, 237, 253);
+}
+#view-book td button{
+    padding: 10px 5px;
+    background-color: rgb(236, 237, 253);
+    color: navy;
+    border: none;
+}
+#view-book td:first-child{
+    color: navy;
+    background-color: rgb(219, 221, 255);
+    text-align: center;
+}
