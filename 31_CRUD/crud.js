@@ -8,7 +8,7 @@ let editDesc = document.querySelector("#editDesc");
 let editPrice = document.querySelector("#editPrice");
 let editCategory = document.querySelector("#editCategory");
 
-
+ 
 let addForm = document.querySelector("#add-book");
 let editForm = document.querySelector("#edit-book");
 let editBookForm = document.querySelector("#edit-book-form");
