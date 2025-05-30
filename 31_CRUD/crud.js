@@ -19,7 +19,7 @@ let editIndex = null;
 addForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    let books = JSON.parse(sessionStorage.getItem('books')) || [];
+    let books = JSON.parse(localStorage.getItem('books')) || [];
     let newBook = {
         title: title.value,
         desc: desc.value,
@@ -29,14 +29,14 @@ addForm.addEventListener('submit', (e) => {
 
     books.push(newBook)
     // sessionStorage.setItem('books', JSON.stringify( books));
-    sessionStorage.setItem('books', JSON.stringify( books));
+    localStorage.setItem('books', JSON.stringify( books));
     displayData();
     addForm.reset();
 });
 
 
 function displayData() {
-    let books = JSON.parse(sessionStorage.getItem('books'));
+    let books = JSON.parse(localStorage.getItem('books'));
     // console.log(books);
     let rowData = "";
     books.forEach((book, index) => {
@@ -61,7 +61,7 @@ displayData();
 
 
 function deleteBook(id){
-    let books = JSON.parse(sessionStorage.getItem('books'))
+    let books = JSON.parse(localStorage.getItem('books'))
     books.splice(id, 1);
     // books = books.filter((book) => book.title != title)
     localStorage.setItem('books', JSON.stringify(books));
@@ -69,7 +69,7 @@ function deleteBook(id){
 }
 
 function editBook(id){
-    let books = JSON.parse(sessionStorage.getItem('books'));
+    let books = JSON.parse(localStorage.getItem('books'));
     // console.log(books[id]);
     let book = books[id];
 
@@ -87,7 +87,7 @@ function editBook(id){
 editForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    let books = JSON.parse(sessionStorage.getItem('books')) || [];
+    let books = JSON.parse(localStorage.getItem('books')) || [];
     books[editIndex] = {
         title: editTitle.value,
         desc: editDesc.value,
