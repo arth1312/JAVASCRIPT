@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Exam</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    
+     <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-dark py-4 bg-secondary-subtle">
+        <div class="container">
+            <a href="javascript:void(0)" class="text-decoration-none">
+                <img src="img/Shopify_logo.png" alt="Shopify_logo" title="Shopify_logo" width="100">
+            </a>
+            <ul class="list-unstyled d-flex mb-0 order-lg-1 align-items-center">
+                <li>
+                    <input type="text" id="searchInput" class="py-2 px-3 me-3 rounded" placeholder="Search by title">
+                </li>
+                <li>
+                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </li>
+            </ul>
+            <nav class="navbar-collapse collapse flex-lg-grow-0" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown mx-lg-2">
+                        <a href="javascript:void(0)" class="nav-link fw-semibold text-black">Home</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="nav-link fw-semibold text-black">About</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="nav-link fw-semibold text-black">Products</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="nav-link fw-semibold text-black">Service</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="nav-link fw-semibold text-black">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Add product model -->
+    <div class="addprduct">
+        <div class="addproduct-inner">
+            <div class="addprduct-title">
+            <h1 class="fs-5">Add New Product</h1>
+        </div>
+        <div class="addproduct-body">
+            <form id="ProductForm">
+                <div class="form-group">
+                    <label>Product Name:</label>
+                    <input type="text" id="Product_name" placeholder="Enter product name" required>
+                </div>
+                <div class="form-group">
+                    <label>Product Image :</label>
+                    <input type="text" id="Product_image" placeholder="Enter product image URL" required>
+                </div>
+                <div class="form-group">
+                    <label>Price:</label>
+                    <input type="text" id="Price" placeholder="Enter product price" required>
+                </div>
+                <div class="form-group">
+                    <label>Category:</label>
+                    <input type="text" id="Category" placeholder="Enter product category" required>
+                </div>
+                <button class="submit-btn" type="submit">Add Product</button>
+            </form>
+        </div>
+        </div>
+    </div>
+        
+    <div class="cont col-12">
+    
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/practical_exam.js"></script>
+</body>
+</html>
